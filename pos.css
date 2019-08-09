@@ -30,29 +30,38 @@ section{
 	min-height: 300px;
 	display: block;
 
+/* wenn wir hier statt block flex machen, dann sind die Spalten vom oben nach unten, nicht mehr von links nach rechts */
+}
 
+.flex-container{
+	display: flex;
+	flex-direction:row; /*default Einstellung, Grundeinstellung */
+	justify-content: center;/* Bewegung auf der x-Achse, die Bloxen verschieben sich nach start, end,center, space between und space arpund, sieht man bei uns nur nicht weil Platz komplett ausgefüllt*/
+
+	align-items: center;
 }
 
 
 .col{
-	width: 100%;
+	/* width: 100%; */
 	min-width: 20px;
 	min-height: 50px;
 	margin: 10px;
+	flex-grow: 1;
 }
 
 .trolley-grey{
 	background: #7D7C84;
+	order: 1;
+
 }
 
 .sea-green{
 	background: #2D93AD;
-
 }
 
 .middle-red{
 	background: #DE8F6E;
-
 }
 
 .black{
@@ -61,6 +70,7 @@ section{
 
 .orange{
 	background: orange;
+	order: 2;
 }
 
 .olive{
